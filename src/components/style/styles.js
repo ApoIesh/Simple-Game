@@ -1,6 +1,9 @@
-import { StyleSheet } from "react-native";
+import {StyleSheet} from 'react-native';
 // 'use strict';
-import { widthPercentageToDP, heightPercentageToDP, } from 'react-native-responsive-screen';
+import {
+  widthPercentageToDP,
+  heightPercentageToDP,
+} from 'react-native-responsive-screen';
 export const wp = widthPercentageToDP;
 export const hp = heightPercentageToDP;
 
@@ -10,19 +13,18 @@ const styles = StyleSheet.create({
     backgroundColor: '#ddd',
   },
   target: {
-    fontSize: 50,
-    // backgroundColor: '#999',
-    margin: wp(10),
+    fontSize: wp(13),
+    marginVertical: Platform.OS === 'ios' ? wp(15) : wp(10),
+
     textAlign: 'center',
     color: '#000',
-    borderRadius: wp(8)
+    borderRadius: wp(8),
   },
   randomContainer: {
     flex: 1,
     flexDirection: 'row',
     justifyContent: 'space-around',
     flexWrap: 'wrap',
-
   },
   random: {
     backgroundColor: '#999',
@@ -31,16 +33,15 @@ const styles = StyleSheet.create({
     marginVertical: hp(2),
     fontSize: 35,
     textAlign: 'center',
-
   },
   STATUS_PLAYING: {
-    backgroundColor: '#999'
+    backgroundColor: '#999',
   },
   STATUS_WON: {
-    backgroundColor: 'green'
+    backgroundColor: 'green',
   },
   STATUS_LOST: {
-    backgroundColor: 'orange'
+    backgroundColor: 'orange',
   },
   random: {
     backgroundColor: '#bbb',
@@ -49,11 +50,10 @@ const styles = StyleSheet.create({
     marginVertical: wp(5),
     fontSize: 35,
     textAlign: 'center',
-    borderRadius: wp(8)
-
+    borderRadius: wp(8),
   },
   disabled: {
-    opacity: 0.4
+    opacity: 0.4,
   },
   resetGame: {
     alignSelf: 'center',
@@ -65,16 +65,15 @@ const styles = StyleSheet.create({
     backgroundColor: '#999',
     width: wp(75),
     height: hp(7),
-    marginVertical: hp(.5)
-
+    marginVertical: hp(0.5),
   },
   resetText: {
     color: '#000',
     fontSize: 20,
   },
-  statusText:{
-    fontSize:20
-  }
-})
+  statusText: {
+    fontSize: wp(3.5),
+  },
+});
 
 export default styles;
